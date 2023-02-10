@@ -13,7 +13,7 @@ app.get("/json", (req, res) => {
 });
 
 app.get('/now', function (req, res, next) {
-  req.time = Date().toString();  // Hypothetical synchronous operation
+  req.time = Date().toString();  
   next();
 }, function (req, res) {
   res.send({ time: req.time });
